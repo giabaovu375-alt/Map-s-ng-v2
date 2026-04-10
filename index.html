@@ -139,6 +139,36 @@
         Bảo Binh Pháp © 2026<br>
     </div>
 </div>
+<script>
+    // 1. Đây là nơi sếp cất mã Key để nó hiện ra khi thàng đệ vượt link xong
+    const keyData = {
+        k1: "MÃ-KEY-01-CỦA-SẾP", 
+        k2: "MÃ-KEY-02-CỦA-SẾP", 
+        k3: "MÃ-KEY-03-CỦA-SẾP" 
+    };
 
+    // 2. Hàm này tự động chạy để check xem thằng đệ đã có "dấu vân tay" chưa
+    function checkStatus() {
+        for (let i = 1; i <= 3; i++) {
+            // Nó kiểm tra bộ nhớ máy (localStorage) xem có dấu 'da_lay_keyX' không
+            if (localStorage.getItem('da_lay_key' + i)) {
+                
+                // Nếu có dấu, nó tìm cái thẻ có id là 'ui-kX' để thay đổi nội dung
+                document.getElementById('stt-' + i).innerHTML = '<span style="color:#00ff00;">● ĐÃ LẤY</span>';
+                
+                // Nó xóa cái nút xanh đi và hiện mã Key từ cái kho keyData ở trên ra
+                document.getElementById('ui-k' + i).innerHTML = `
+                    <div style="background:#000; color:#ffff00; padding:8px; border:1px dashed #555; text-align:center;">
+                        ${keyData['k' + i]}
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // Cho nó chạy luôn khi vừa mở web
+    checkStatus();
+</script>
+    
 </body>
 </html>
