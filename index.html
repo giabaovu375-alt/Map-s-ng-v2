@@ -13,27 +13,22 @@
             padding: 20px;
             text-align: center;
         }
-        /* Style cho Avatar */
-        /* Tối ưu Avatar to và nằm trên cùng */
-.avatar-container {
-    margin-top: 10px; /* Cách mép trên một chút */
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.avatar {
-    width: 120px; /* Tăng từ 90px lên 120px cho to hẳn */
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid #ff0000; /* Viền dày hơn cho chất */
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8); /* Tỏa sáng mạnh hơn */
-    object-fit: cover;
-    background-color: #000;
-}
-        
-        
+        .avatar-container {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ff0000;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+            object-fit: cover;
+            background-color: #000;
+        }
         .container {
             max-width: 500px;
             margin: auto;
@@ -43,10 +38,59 @@
             background: #121212;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
         }
-        h1 { color: #ff0000; text-transform: uppercase; font-size: 24px; }
+        h1 { color: #ff0000; text-transform: uppercase; font-size: 24px; margin-bottom: 5px;}
         
+        /* Style cho danh sách Key mới */
+        .key-list-box {
+            background: #1a1a1a;
+            border: 1.5px solid #ff0000;
+            border-radius: 12px;
+            margin-top: 15px;
+            overflow: hidden;
+            text-align: left;
+        }
+        .key-header {
+            background: #ff0000;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 15px;
+        }
+        .key-item {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+        }
+        .key-title {
+            color: #ff4444;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn-link {
+            display: block;
+            background: #007bff;
+            color: white !important;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            border-bottom: 3px solid #0056b3;
+        }
+        .key-display {
+            background: #000;
+            color: #ffff00;
+            padding: 10px;
+            border: 1px dashed #ffff00;
+            text-align: center;
+            font-family: monospace;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-        /* Nút Bấm */
         .btn {
             display: block;
             text-decoration: none;
@@ -58,10 +102,7 @@
             color: white;
         }
         .btn-download { background: #ff0000; }
-        .btn-download:hover { background: #cc0000; transform: scale(1.02); }
-        
         .btn-yt { background: #ff0000; border-left: 5px solid #fff; }
-        
         .section-title {
             text-align: left;
             border-left: 4px solid #ff0000;
@@ -69,7 +110,6 @@
             margin-top: 25px;
             color: #ffeb3b;
         }
-
         .note {
             font-size: 13px;
             text-align: left;
@@ -82,41 +122,32 @@
     </style>
 </head>
 <body>
-    </div>
-    <div class="container">
+
+<div class="container">
     <div class="avatar-container">
         <img src="c2f6479b5a2de3f1163467d89e4580f3.jpg" alt="Bảo Binh Pháp" class="avatar">
     </div>
 
-    <div class="header">
-        <h1>🛡️ BẢO BINH PHÁP MAP SÁNG V2 🛡️</h1>
-        <p>BẢO SHARE BINH PHÁP TÔN BẰNG</p>
-    </div>
-    
-    </div>
-    
+    <h1>🛡️ BẢO BINH PHÁP 🛡️</h1>
+    <p style="font-size: 14px; margin-bottom: 20px;">MAP SÁNG V2 - TÔN BẰNG</p>
 
-<div class="container">
-    <h1>🛡️ BẢO BINH PHÁP MAP SÁNG V2 🛡️</h1>
-    <p style="font-size: 14px;">BẢO SHARE BINH PHÁP TÔN BẰNG</p>
-
-</div> 
-
-<div style="margin-top: 15px;">
-    <details style="background: #2a2a2a; border: 1px solid #d32f2f; border-radius: 8px; padding: 10px;">
-        <summary style="color: #ff4444; font-weight: bold; cursor: pointer; list-style: none; text-align: center;">
-            🔑 DANH SÁCH KEY MOD HÔM NAY (Bấm để xem)
-        </summary>
-        <div style="color: white; font-size: 14px; text-align: center; margin-top: 10px;">
-            <p>Key 1: <code>NTDShareexVYKyo</code></p>
-            <p>Key 2: <code>đang cập nhật...</code></p>
-            <p>Key 3: <code>đang cập nhật...</code></p>
-            <small style="color: #888;">*Key reset lúc 00:00 mỗi ngày*</small>
+    <div class="key-list-box">
+        <div class="key-header">🔑 DANH SÁCH KEY HÔM NAY</div>
+        
+        <div class="key-item">
+            <div class="key-title">🔹 KEY MOD 01 <span id="stt-1"></span></div>
+            <div id="ui-k1">
+                <a href="DÁN_LINK_RÚT_GỌN_1" target="_blank" class="btn-link">➡️ Vượt Link Lấy Key 1</a>
+            </div>
         </div>
-    </details>
-</div>
 
-    
+        <div class="key-item">
+            <div class="key-title">🔹 KEY MOD 02 <span id="stt-2"></span></div>
+            <div id="ui-k2">
+                <a href="DÁN_LINK_RÚT_GỌN_2" target="_blank" class="btn-link">➡️ Vượt Link Lấy Key 2</a>
+            </div>
+        </div>
+    </div>
 
     <h3 class="section-title">📱 TẢI BẢN MAP ANDROID</h3>
     <a href="https://link4m.co/st?api=69d643765294c80ba936dc29&url=https://www.mediafire.com/file/b1up23ywkmvtn9j/%255Bx64.%255DLie%25CC%2582n_Qua%25CC%2582n_Mobile_1.62.1.4_apks_clone_%252330_clone.apk/file" class="btn btn-download">🚀 Tải Bản Máy Mạnh (64-Bit)</a>
@@ -126,10 +157,9 @@
     <a href="https://youtube.com/shorts/P21Q9rjLdwc?si=NqB7lyp4vjrco0y3" class="btn btn-yt">📺 XEM VIDEO CÁCH CÀI ĐẶT</a>
     
     <div class="note">
-        <p>✅ <b>BƯỚC 1:</b> Gỡ sạch bản Liên Quân gốc trong máy.</p>
-        <p>✅ <b>BƯỚC 2:</b> Tải bản map phù hợp với máy bên trên.</p>
+        <p>✅ <b>BƯỚC 1:</b> Gỡ sạch bản Liên Quân gốc.</p>
+        <p>✅ <b>BƯỚC 2:</b> Tải bản map phù hợp phía trên.</p>
         <p>✅ <b>BƯỚC 3:</b> Cài đặt, nhập Key và chiến.</p>
-        <p>⚠️ <b>LƯU Ý:</b> Nếu lỗi đăng nhập Facebook, hãy xóa app Facebook rồi đăng nhập lại bằng trình duyệt chrome!</p>
     </div>
 
     <h3 class="section-title">🎁 DỊCH VỤ KHÁC</h3>
@@ -139,35 +169,28 @@
         Bảo Binh Pháp © 2026<br>
     </div>
 </div>
+
 <script>
-    // 1. Đây là nơi sếp cất mã Key để nó hiện ra khi thàng đệ vượt link xong
+    // 1. KHO KEY (Sếp thay key thật vào đây cho khớp với file phụ)
     const keyData = {
-        k1: "MÃ-KEY-01-CỦA-SẾP", 
-        k2: "MÃ-KEY-02-CỦA-SẾP", 
-        k3: "MÃ-KEY-03-CỦA-SẾP" 
+        k1: "NTDShareexVYKyo", 
+        k2: "KEY-02-DANG-CAP-NHAT"
+        k3: "KEY-03-DANG-CAP-NHAT"
     };
 
-    // 2. Hàm này tự động chạy để check xem thằng đệ đã có "dấu vân tay" chưa
+    // 2. HÀM TỰ ĐỘNG CHECK VÂN TAY TRÌNH DUYỆT
     function checkStatus() {
-        for (let i = 1; i <= 3; i++) {
-            // Nó kiểm tra bộ nhớ máy (localStorage) xem có dấu 'da_lay_keyX' không
+        for (let i = 1; i <= 2; i++) {
             if (localStorage.getItem('da_lay_key' + i)) {
-                
-                // Nếu có dấu, nó tìm cái thẻ có id là 'ui-kX' để thay đổi nội dung
-                document.getElementById('stt-' + i).innerHTML = '<span style="color:#00ff00;">● ĐÃ LẤY</span>';
-                
-                // Nó xóa cái nút xanh đi và hiện mã Key từ cái kho keyData ở trên ra
-                document.getElementById('ui-k' + i).innerHTML = `
-                    <div style="background:#000; color:#ffff00; padding:8px; border:1px dashed #555; text-align:center;">
-                        ${keyData['k' + i]}
-                    </div>
-                `;
+                // Nếu đã vượt link rồi
+                document.getElementById('stt-' + i).innerHTML = '<span style="color:#00ff00; font-size:11px;">● ĐÃ MỞ KHÓA</span>';
+                document.getElementById('ui-k' + i).innerHTML = `<div class="key-display">${keyData['k' + i]}</div>`;
             }
         }
     }
 
-    // Cho nó chạy luôn khi vừa mở web
-    checkStatus();
+    // Chạy ngay khi load trang
+    window.onload = checkStatus;
 </script>
     
 </body>
