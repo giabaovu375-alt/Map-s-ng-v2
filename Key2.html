@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KẾT QUẢ KEY 01</title>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px; }
+        .card { 
+            display: inline-block; background: #1a1a1a; border: 2px solid #00ff00; 
+            padding: 30px; border-radius: 20px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+            max-width: 90%;
+        }
+        .key-box { 
+            background: #000; color: #ffff00; font-size: 22px; font-weight: bold; 
+            padding: 15px; border: 2px dashed #ffff00; margin: 20px 0; 
+            letter-spacing: 2px; word-break: break-all;
+        }
+        .btn-back { 
+            display: inline-block; text-decoration: none; color: #007bff; 
+            font-size: 14px; font-weight: bold; margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Khi đệ vào trang này, trình duyệt tự lưu dấu 'đã lấy'
+        // Nếu là file key2 thì sửa thành 'da_lay_key2', key3 sửa thành 'da_lay_key3'
+        localStorage.setItem('da_lay_key1', 'true');
+    </script>
+
+    <div class="card">
+        <h2 style="color: #00ff00; margin-bottom: 5px;">✔️ THÀNH CÔNG!</h2>
+        <p style="color: #888; font-size: 14px;">Bạn đã hoàn thành vượt link.</p>
+        
+        <p style="margin-top: 20px; font-size: 13px; color: #ccc;">Mã Key của bạn là:</p>
+        
+        <div class="key-box">NTDSharefQdB7zH</div>
+
+        <a href="index.html" class="btn-back">⬅️ QUAY LẠI TRANG CHỦ</a>
+        <p style="font-size: 10px; color: #555; margin-top: 15px;">(Trang chủ sẽ tự động lưu mã này cho bạn)</p>
+    </div>
+
+</body>
+</html>
 
