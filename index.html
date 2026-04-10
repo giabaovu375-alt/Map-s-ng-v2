@@ -14,19 +14,25 @@
             text-align: center;
         }
         /* Style cho Avatar */
+        /* Tối ưu Avatar to và nằm trên cùng */
 .avatar-container {
-    margin-bottom: 15px;
+    margin-top: 10px; /* Cách mép trên một chút */
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
+
 .avatar {
-    width: 80px; /* Độ rộng avatar */
-    height: 80px; /* Độ cao avatar */
-    border-radius: 50%; /* Làm tròn 100% */
-    border: 3px solid #ff0000; /* Viền đỏ rực rỡ */
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Hiệu ứng tỏa sáng đỏ */
-    object-fit: cover; /* Giữ tỉ lệ ảnh không bị móp */
+    width: 120px; /* Tăng từ 90px lên 120px cho to hẳn */
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #ff0000; /* Viền dày hơn cho chất */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.8); /* Tỏa sáng mạnh hơn */
+    object-fit: cover;
+    background-color: #000;
 }
+        
         
         .container {
             max-width: 500px;
@@ -95,9 +101,18 @@
 </head>
 <body>
     </div>
-    <div class="avatar">
-    <img src="/c2f6479b5a2de3f1163467d89e4580f3.jpg" alt="Avatar Bảo Binh Pháp" class="avatar">
+    <div class="container">
+    <div class="avatar-container">
+        <img src="/c2f6479b5a2de3f1163467d89e4580f3.jpg" alt="Bảo Binh Pháp" class="avatar">
     </div>
+
+    <div class="header">
+        <h1>🛡️ BẢO BINH PHÁP MAP SÁNG V2 🛡️</h1>
+        <p>BẢO SHARE BINH PHÁP TÔN BẰNG</p>
+    </div>
+    
+    </div>
+    
 
 <div class="container">
     <h1>🛡️ BẢO BINH PHÁP MAP SÁNG V2 🛡️</h1>
